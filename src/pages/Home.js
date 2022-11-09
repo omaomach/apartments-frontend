@@ -1,10 +1,19 @@
-import React from "react"
+import React, { useEffect, useState }  from "react"
 import {  Container, Row, Col, } from "react-bootstrap"
 import HouseCard from "../components/HouseCard"
 import Search from "../components/Search"
 
 
 function Home() {
+
+  const [apartments, setApartments] = useState([]);
+
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:9292/apartments")
+      .then((r) => r.json())
+      .then((apartments) => setApartments(apartments));
+  }, []);
     
     return (
           <>
@@ -24,24 +33,13 @@ function Home() {
 
           <Container>
              <Row>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
-             <Col xs={12} md={4}className='p-5' > 
-             <HouseCard/> 
-             </Col>
+             {apartments.map((apartment) => (
+            <Col xs={12} md={4}className='p-5'>
+            <HouseCard  apartment={apartment} key={apartment.id}/>
+            </Col>
+             ))}
+            
+
             </Row>
           </Container>
         

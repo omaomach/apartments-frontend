@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.Home{
+    background-image: url("./images/robin-van-geenen-YBcjvOiwMXM-unsplash.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.title{
+     padding-top: 8%;
+     font-size: 58px;
+     color:black;
+     /* text-align: center; */
+}
+
+.find{
+    /* text-align: center; */
+    font-size: 40px;
+}
+

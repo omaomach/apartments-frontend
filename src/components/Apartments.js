@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import pic from '../images/alex-motoc-J5eEiP-DJYk-unsplash.jpg'
 import Form from 'react-bootstrap/Form';
+import { useParams } from 'react-router-dom';
 
 
 
 const Apartments = () => {
+  const {id}= useParams();
+  const [house, setHouse] = useState([])
+
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:9292/apartments/${id}`)
+      .then((r) => r.json())
+      .then((house) => setHouse(house));
+  }, []);
+
   return (
     <>
     <Carousel className="slider">
@@ -50,11 +61,11 @@ const Apartments = () => {
   </Carousel>
      <Container>
       <Row>
-      <Col xs={6} md={6} className='p-5 m-5'  >
-      <p>Title:Gekonyo apartments</p>
-      <p>Description:one bedroom</p>
-      <p>price:20,000ksh</p>
-      <p>Caretaker_contact:096787698</p>
+      <Col xs={12} md={6} className='p-5 m-5'>
+      <p>Title: {house.title}</p>
+      <p>Description: {house.description}</p>
+      <p>price: {house.rent}</p>
+      <p>Caretaker_contact: 096787698</p>
       </Col>
       </Row>
      </Container>

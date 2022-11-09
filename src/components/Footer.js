@@ -1,5 +1,5 @@
 import React from 'react';
-import { TiSocialFacebook, TiSocialInstagram, TiSocialTwitter, TiSocialPinterest, TiSocialLinkedin } from "react-icons/ti"
+import { TiSocialFacebook, TiSocialInstagram, TiSocialTwitter,  TiSocialLinkedin } from "react-icons/ti"
 
 function Footer () {
 

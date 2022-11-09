@@ -1,7 +1,7 @@
 import React from "react"
 import {  Container, Row, Col, } from "react-bootstrap"
-import HouseCard from "../componets/HouseCard"
-import Search from "../componets/Search"
+import HouseCard from "../components/HouseCard"
+import Search from "../components/Search"
 
 
 function Home() {
@@ -20,6 +20,7 @@ function Home() {
           </div>
 
           <Search/>
+         
 
           <Container>
              <Row>

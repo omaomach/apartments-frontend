@@ -22,3 +22,10 @@
     font-size: 40px;
 }
 
+.slider{
+    width: 70vw !important;
+    height: 70vh !important;
+    /* margin: 30px; */
+    /* margin-top: 1%; */
+    margin-left: 170px;
+}

@@ -1,5 +1,7 @@
 import React, { useEffect, useState }  from "react"
 import {  Container, Row, Col, } from "react-bootstrap"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import HouseCard from "../components/HouseCard"
 import Search from "../components/Search"
 
@@ -37,7 +39,7 @@ function Home() {
 
   if (filter2) {
     filteredApartments = filteredApartments.filter((apartment) => {
-      return apartment.rent < Number(filter2)
+      return apartment.rent <= Number(filter2)
     })
   }
 
@@ -72,7 +74,8 @@ function Home() {
     
     return (
           <>
-        
+          <Navbar />
+
           <div className='Home text-center'>
            <p className='text-center  fw-bold title'>
             An apartment <br/> anytime <br/>anyday
@@ -83,7 +86,7 @@ function Home() {
           
           </div>
 
-          <Search onSetFilter={setFilter} onSetFilter2={setFilter2} onSetFilter3={setFilter3} onClearFilter={clearFilter}/>
+          <Search filter={filter} onSetFilter={setFilter} filter2={filter2} onSetFilter2={setFilter2} filter3={filter3} onSetFilter3={setFilter3} onClearFilter={clearFilter}/>
          
 
           <Container>
@@ -97,6 +100,8 @@ function Home() {
 
             </Row>
           </Container>
+
+          <Footer />
         
           
           </>

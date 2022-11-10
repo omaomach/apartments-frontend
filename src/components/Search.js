@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-function Search({ onSetFilter, onSetFilter2, onSetFilter3, onClearFilter }) {
+function Search({ filter, onSetFilter, filter2, onSetFilter2, filter3, onSetFilter3, onClearFilter }) {
 
   const [location, setLocation] = useState([])
 
@@ -13,7 +13,7 @@ function Search({ onSetFilter, onSetFilter2, onSetFilter3, onClearFilter }) {
 
   return (
     <>
-  <select className="form-select-lg mt-3  m-5" aria-label=".form-select-lg " onChange={(event) => onSetFilter(event.target.value == 0 ? "" : event.target.value)}>
+  <select className="form-select-lg mt-3  m-5" value={filter} aria-label=".form-select-lg " onChange={(event) => onSetFilter(event.target.value == 0 ? "" : event.target.value)}>
   <option value={0}>Filter by location</option>
   
   {Object.keys(location).length > 0 && location.map((locate) => (
@@ -21,7 +21,7 @@ function Search({ onSetFilter, onSetFilter2, onSetFilter3, onClearFilter }) {
   ))}
   
   </select>
-  <select className="form-select-lg mt-3  m-5" aria-label=".form-select-lg " onChange={(event) => onSetFilter2(event.target.value)}>
+  <select className="form-select-lg mt-3  m-5" value={filter2} aria-label=".form-select-lg " onChange={(event) => onSetFilter2(event.target.value)}>
   <option selected>Filter by rent</option>
   <option value="10000">Less than 10000</option>
   <option value="20000">Less than 20000</option>
@@ -29,7 +29,7 @@ function Search({ onSetFilter, onSetFilter2, onSetFilter3, onClearFilter }) {
   
 
 </select>
-<select className="form-select-lg mt-3 m-5" aria-label=".form-select-lg " onChange={(event) => onSetFilter3(event.target.value)}>
+<select className="form-select-lg mt-3 m-5" value={filter3} aria-label=".form-select-lg " onChange={(event) => onSetFilter3(event.target.value)}>
   <option selected>Filter by rooms</option>
   <option value="1">1</option>
   <option value="2">2</option>

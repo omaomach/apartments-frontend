@@ -7,6 +7,10 @@ import Search from "../components/Search"
 function Home() {
 
   const [apartments, setApartments] = useState([]);
+  // const [search, setSearch] = useState([])
+  const [filter, setFilter] = useState("")
+
+  console.log(filter)
 
 
   useEffect(() => {
@@ -14,6 +18,20 @@ function Home() {
       .then((r) => r.json())
       .then((apartments) => setApartments(apartments));
   }, []);
+
+  // function searchApartment(newSearch) {
+  //   setSearch(newSearch)
+  // }
+
+  const filteredApartments = apartments.filter((apartment) => {
+    let result = apartment.location.name === filter
+    return result
+  })
+
+  const newArr = filter ? filteredApartments : apartments
+  console.log(newArr)
+
+  // console.log(filteredApartments)
     
     return (
           <>
@@ -28,14 +46,14 @@ function Home() {
           
           </div>
 
-          <Search/>
+          <Search onSetFilter={setFilter}/>
          
 
           <Container>
              <Row>
-             {apartments.map((apartment) => (
-            <Col xs={12} md={4}className='p-5'>
-            <HouseCard  apartment={apartment} key={apartment.id}/>
+             {newArr.map((apartment) => (
+            <Col key={apartment.id} xs={12} md={4}className='p-5'>
+            <HouseCard  apartment={apartment}/>
             </Col>
              ))}
             

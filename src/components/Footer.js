@@ -29,7 +29,7 @@ function Footer () {
           <section className="footer-info__email">
             Contact Us
             <br />
-            Apartment.info@gmail.com
+            Apartments.info@gmail.com
             <br />
             phone.no +254712345678
           </section>

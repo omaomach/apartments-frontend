@@ -1,82 +1,85 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.Home{
-    background-image: url("./images/robin-van-geenen-YBcjvOiwMXM-unsplash.jpg");
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-size:cover;
-
+.Home {
+  background-image: url("./images/robin-van-geenen-YBcjvOiwMXM-unsplash.jpg");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.title{
-     padding-top: 8%;
-     font-size: 58px;
-     color:black;
-     /* text-align: center; */
-}
-
-.find{
-    /* text-align: center; */
-    font-size: 40px;
+.title {
+  padding-top: 8%;
+  font-size: 58px;
+  color: black;
+  /* text-align: center; */
 }
 
-.slider{
-    width: 70vw !important;
-    height: 70vh !important;
-    /* margin: 30px; */
-    /* margin-top: 1%; */
-    margin-left: 170px;
+.find {
+  /* text-align: center; */
+  font-size: 40px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
- *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   font-family: 'Titillium Web', sans-serif;
- }
- :root{
-  --mainColor: #29335C;
-  --mainColorlight: #5767AA;
-  --secondaryColor: #DB2B39;
+.slider {
+  width: 50vw !important;
+  height: 50vh !important;
+  /* margin: 30px; */
+  /* margin-top: 1%; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 0;
+  border-radius: 12px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+:root {
+  --mainColor: #29335c;
+  --mainColorlight: #5767aa;
+  --secondaryColor: #db2b39;
   --textColor: #eee;
 }
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: #29335C;
+  background-color: #29335c;
   color: #eee;
 }
-nav a{
+nav a {
   margin: 0 2rem;
   color: #eee;
   text-decoration: none;
 }
-nav a:hover{
-  color: #DB2B39;
+nav a:hover {
+  color: #db2b39;
 }
-header .nav-btn{
+header .nav-btn {
   padding: 5px;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
-  color:#eee;
+  color: #eee;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
 }
-@media only screen and (max-widht: 2024px){
-  header .nav-btn{
+@media only screen and (max-widht: 2024px) {
+  header .nav-btn {
     visibility: visible;
     opacity: 1;
   }
-  header nav{
+  header nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -87,34 +90,34 @@ header .nav-btn{
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: #29335C;
+    background-color: #29335c;
     transition: 2s;
     transform: translateY(-100vh);
   }
-  header .responsive_nav{
+  header .responsive_nav {
     transform: none;
   }
-nav .nav-close-btn{
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
-nav a{
-  font-size:  1.5rem;
-}
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  nav a {
+    font-size: 1.5rem;
+  }
 }
 .footer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30vh;
+  margin-bottom: 0px;
   font-weight: bold;
-  background-color: #29335C;
+  background-color: #29335c;
   padding: 0, 1rem;
   list-style: none;
   gap: 1rem;
 }
 .footer-social-media {
-  display:inline-flexbox;
+  display: inline-flexbox;
   flex-direction: row;
   justify-content: left;
   margin-bottom: 20px;
@@ -122,8 +125,8 @@ nav a{
   padding: 0 1rempx;
   color: #eee;
 }
-.footer-social-media:hover{
-  color: #DB2B39;
+.footer-social-media:hover {
+  color: #db2b39;
 }
 .footer-social-media__icon {
   margin: 10px 15px;
@@ -131,15 +134,17 @@ nav a{
   height: 50px;
   justify-content: space-between;
 }
-.footer-social-media__icon:hover{
-  color: #DB2B39;
+.footer-social-media__icon:hover {
+  color: #db2b39;
 }
-.footer-info  {
+.footer-info {
   display: flex;
   justify-content: center;
   color: #eee;
 }
-.footer-info-left, .footer-info-center, .footer-info-right {
+.footer-info-left,
+.footer-info-center,
+.footer-info-right {
   font-size: medium;
   display: flex;
   flex-direction: column;
@@ -147,16 +152,21 @@ nav a{
   margin-bottom: 10vh;
   width: 50%;
 }
-.footer-info__name, .footer-info__email, .footer-info__number {
+.footer-info__name,
+.footer-info__email,
+.footer-info__number {
   margin-bottom: 10px;
 }
-.footer-info__name, .footer-info__returns {
+.footer-info__name,
+.footer-info__returns {
   text-align: start;
 }
-.footer-info__email, .footer-info__terms {
+.footer-info__email,
+.footer-info__terms {
   text-align: center;
 }
-.footer-info__number, .footer-info__contact {
+.footer-info__number,
+.footer-info__contact {
   text-align: end;
 }
 .footer-date {
@@ -174,12 +184,119 @@ nav a{
   display: flex;
   justify-content: center;
 }
-.footer-name:hover{
-  color: #DB2B39;
+.footer-name:hover {
+  color: #db2b39;
 }
 .footer-bottom__name {
   text-transform: uppercase;
   font-family: RobotoBold;
   font-size: large;
   margin: 0px 20px;
+}
+
+.apartment_info {
+  background-color: #29335c;
+  text-align: center;
+  width: 800px;
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border-radius: 12px;
+  /* margin-bottom: 50px; */
+}
+
+.container {
+  /* background-color: #29335C; */
+  display: flex;
+  flex-direction: row;
+}
+
+.container1 {
+  /* background-color: #29335C; */
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.container2 {
+  margin-top: 75px;
+  width: 800px;
+  height: 796.5px;
+  background-color: #29335c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  border-radius: 12px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+
+input[type=number] {
+  border-radius: 12px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  border-radius: 12px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin-left: 17%;
+  margin-top: 1rem;
+}
+
+.client-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 400px;
+}
+
+.form-client h3 {
+  color: aliceblue;
+  margin-left: 17%;
+}
+
+.appointment-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-names {
+  border-radius: 12px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.delete-appointment {
+  border-radius: 12px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin-left: 17%;
+  margin-top: 1rem;
+}
+
+.appointment-form h3{
+  color: aliceblue;
+  margin-left: 17%;
+}
+
+.clear-filters {
+  border-radius: 12px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.filters {
+  margin-left: 17%;
 }

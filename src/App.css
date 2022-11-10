@@ -1,31 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-}
-.Home{
-    background-image: url("./images/robin-van-geenen-YBcjvOiwMXM-unsplash.jpg");
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-size:cover;
 
-}
-.title{
-     padding-top: 8%;
-     font-size: 58px;
-     color:black;
-     /* text-align: center; */
+.section{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.find{
-    /* text-align: center; */
-    font-size: 40px;
+.main-heading{
+    color: rgb(204, 18, 18);
+    font-size: 26px;
 }
-
-.slider{
-    width: 70vw !important;
-    height: 70vh !important;
-    /* margin: 30px; */
-    /* margin-top: 1%; */
-    margin-left: 170px;
+.underline{
+    height: 04px;
+    width: 4rem;
+    background-color: #762c2f;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

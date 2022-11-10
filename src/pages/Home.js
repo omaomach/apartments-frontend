@@ -9,8 +9,10 @@ function Home() {
   const [apartments, setApartments] = useState([]);
   // const [search, setSearch] = useState([])
   const [filter, setFilter] = useState("")
+  const [filter2, setFilter2] = useState("")
+  const [filter3, setFilter3] = useState("")
 
-  console.log(filter)
+  // console.log(filter)
 
 
   useEffect(() => {
@@ -23,13 +25,48 @@ function Home() {
   //   setSearch(newSearch)
   // }
 
-  const filteredApartments = apartments.filter((apartment) => {
+  let filteredApartments = apartments.filter((apartment) => {
     let result = apartment.location.name === filter
     return result
+
+    // if (filter || filter2 ) {
+    //   return apartment.location.name === filter || apartment.rent < Number(filter2)
+    // }
+
   })
 
-  const newArr = filter ? filteredApartments : apartments
-  console.log(newArr)
+  if (filter2) {
+    filteredApartments = filteredApartments.filter((apartment) => {
+      return apartment.rent < Number(filter2)
+    })
+  }
+
+  if (filter3) {
+    filteredApartments = filteredApartments.filter((apartment) => {
+      return apartment.room === Number(filter3)
+    })
+  }
+
+  const clearFilter = () => {
+    setFilter("")
+    setFilter2("")
+    setFilter3("")
+  }
+
+
+  // const filterByRent = apartments.filter((apartment) => {
+  //   let result = apartment.rent === filter2
+  //   return result
+  // })
+
+  const newArr = filter || filter2 || filter3 ? filteredApartments : apartments
+  // console.log(newArr)
+
+  // const newArr2 = filter2 ? filterByRent : apartments
+  // console.log(newArr2)
+
+  // const finalArr = [...newArr,...newArr2]
+  // console.log(finalArr)
 
   // console.log(filteredApartments)
     
@@ -46,7 +83,7 @@ function Home() {
           
           </div>
 
-          <Search onSetFilter={setFilter}/>
+          <Search onSetFilter={setFilter} onSetFilter2={setFilter2} onSetFilter3={setFilter3} onClearFilter={clearFilter}/>
          
 
           <Container>

@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 
-function Search({ onSetFilter }) {
+function Search({ onSetFilter, onSetFilter2, onSetFilter3, onClearFilter }) {
 
   const [location, setLocation] = useState([])
+
 
   useEffect(() => {
     fetch("http://127.0.0.1:9292/locations")
@@ -20,18 +21,23 @@ function Search({ onSetFilter }) {
   ))}
   
   </select>
-  <select className="form-select-lg mt-3  m-5" aria-label=".form-select-lg ">
+  <select className="form-select-lg mt-3  m-5" aria-label=".form-select-lg " onChange={(event) => onSetFilter2(event.target.value)}>
   <option selected>Filter by rent</option>
-  <option value="1">10,000</option>
-  <option value="2">17,000</option>
-  <option value="3">25,000</option>
+  <option value="10000">Less than 10000</option>
+  <option value="20000">Less than 20000</option>
+  <option value="30000">Less than 30000</option>
+  
+
 </select>
-<select className="form-select-lg mt-3 m-5" aria-label=".form-select-lg ">
+<select className="form-select-lg mt-3 m-5" aria-label=".form-select-lg " onChange={(event) => onSetFilter3(event.target.value)}>
   <option selected>Filter by rooms</option>
-  <option value="1">1bedroom</option>
-  <option value="2">2bedroom</option>
-  <option value="3">4bedroom</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
 </select>
+
+<button onClick={onClearFilter}>Clear Filters</button>
+
     </>
   )
 }

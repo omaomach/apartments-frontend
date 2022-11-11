@@ -47,6 +47,12 @@ function Search({
           <option value="10000">Less than 10000</option>
           <option value="20000">Less than 20000</option>
           <option value="30000">Less than 30000</option>
+          <option value="40000">Less than 40000</option>
+          <option value="50000">Less than 50000</option>
+          <option value="60000">Less than 60000</option>
+          <option value="70000">Less than 70000</option>
+          <option value="120000">Less than 120000</option>
+
         </select>
         <select
           className="form-select-lg mt-3 m-5"
@@ -58,6 +64,8 @@ function Search({
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
         </select>
 
         <button className="clear-filters" onClick={onClearFilter}>

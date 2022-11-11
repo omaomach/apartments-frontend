@@ -254,7 +254,7 @@ button[type="submit"] {
 .client-form {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 400px;
+  margin-top: 200px;
 }
 
 .form-client h3 {
@@ -265,12 +265,13 @@ button[type="submit"] {
 .appointment-form {
   margin-left: auto;
   margin-right: auto;
+  height: 300px;
 }
 
 .client-names {
   border-radius: 12px;
   width: 300px;
-  height: 40px;
+  height: 300px;
   text-align: center;
   background-color: aliceblue;
 }

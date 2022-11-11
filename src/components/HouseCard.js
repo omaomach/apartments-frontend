@@ -34,6 +34,7 @@ function HouseCard({apartment}) {
         <Card.Title>{apartment.title}</Card.Title>
         <h6>Rent: {apartment.rent}</h6>
         <h6>Location: {apartment.location.name}</h6>
+        <h6>Rooms: {apartment.room}</h6>
         <Button onClick={() => {navigate (`/Apartments/${apartment.id}`)} }  type="button" className="btn btn-success mt-3">view Apartment</Button> 
       </Card.Body>
     </Card>  
